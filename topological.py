@@ -13,7 +13,8 @@ class Graph:
             self.addEdge(pair[0], pair[1])
     
     def addNode(self, n):
-        self.adjList[n] = []
+        if n not in self.adjList:
+            self.adjList[n] = []
     
     def addEdge(self, n, e):
         self.adjList[n].append(e)
